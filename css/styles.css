@@ -62,6 +62,9 @@ body{
 }
 /* header */
 .site-header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
 
     background-color: var(--main-white);
 }
@@ -69,10 +72,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 25px;
-
-    border-bottom: 1px solid #ECECEC;
+    
 } 
 .header-nav{
     display: flex;
@@ -86,8 +86,14 @@ body{
 .list {
     list-style: none;
 }
-.link{
+.nav-link{
     margin-right: 50px;
+}
+.nav-link:last-child{
+    margin-right: 0px;
+}
+.link{
+  
 }
 
 /* navigation */
@@ -114,14 +120,18 @@ body{
     align-items: center;
 }
 .auth-nav .contact-link{
-    margin-left: 50px;
-
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+}
+.contact-list{
+    margin-left: 50px;
+}
+.contact-list:first-child {
+    margin-left: 0px;
 }
 /* main */
 .site-button,
@@ -132,12 +142,13 @@ body{
 .site{
     background:var(--title-bg-color);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
   
 }
 .site-name{
     margin: auto;
-    padding-top: 200px;
-    padding-bottom: 30px;
+    margin-bottom:30px;
     width: 696px;
  
    
@@ -149,7 +160,6 @@ body{
     color: var(--main-white);
 }
 .site-button{
-    margin-bottom: 200px;
     padding: 10px 32px;
     min-width: 216px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -226,10 +236,13 @@ body{
 }
 /* team */
 .team {
-      background-color: var(--accent-bg-color);
+    padding-top: 94px;
+    background-color: var(--accent-bg-color);
+}
+.team-title{
+    margin-bottom: 50px;
 }
 .list-team{
-    padding-top: 50px;
     display: flex;
 }
 .team-card{ 
@@ -249,7 +262,8 @@ margin-right: 30px;
     color: var(--accent-color);
 }
 .team-subtitle{
-    margin-top: 30px;
+    padding-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -257,37 +271,41 @@ margin-right: 30px;
     color: var(--accent-color);
 }
 .team-text{
-    margin-top: 10px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
 }
 
 /* page portfolio */
+.portfolio{
+    padding-top: 94px;
+}
 
 .button-list{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 
-    font-style: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    color:var(--accent-color);
-    
+}
+.button-filter{
+    margin-right: 8px;
 }
 .button-choice{
     border-radius: 4px;
     padding: 6px 22px;
-    border: transparent;
+    border:2px solid transparent;
+    border-top: 0px;
+    border-bottom: 0px;
     
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--accent-color);
     background: var(--accent-bg-color);
 }
-.button-choice:nth-child(-n+4){
-    margin-right: 8px;
-}
+
 .button-choice:hover, 
 .button-choice:focus{
     color: var(--main-white);
@@ -307,6 +325,7 @@ margin-right: 30px;
     
  }
 .border-card{
+    padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
  }
@@ -319,8 +338,6 @@ margin-right: 30px;
 
 .portf-title{
     margin-bottom: 4px;
-    margin-left: 24px;
-    padding-top : 20px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -328,9 +345,7 @@ margin-right: 30px;
     color: var(--accent-color);
 }
 .portf-text{ 
-    margin-bottom: 20px;
-    margin-left: 24px;
-
+    
     font-size: 16px;
     line-height: 1.88;
    
@@ -343,27 +358,33 @@ margin-right: 30px;
     padding-bottom: 60px;
     
 }
-
-.auth{
-    margin-top: 20px;
-
-    font-style: normal;
-    font-size: 14px; 
-    line-height: 1.71;
-    
+.logo-footer{
+    margin-bottom: 20px;
 }
 /* .auth .address, .auth .contact-link{
     margin-bottom: 9px;
 } */
 .auth .address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
     color: var(--main-white);
     text-decoration: none;
     margin-bottom: 9px;
 }
+.auth-link{
+    margin-bottom: 9px;
+}
+.auth-link:last-child {
+    margin-bottom: 0px;
+}
 .auth .contact-link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-    margin-bottom: 9px;
+    /* margin-bottom: 9px; */
 }
 /* Hover,  focus для адреси в хедері та футері */
 .auth-nav .contact-link:hover, .auth-nav .contact-link:focus, 
